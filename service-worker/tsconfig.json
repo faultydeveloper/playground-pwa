@@ -1,0 +1,6 @@
+{
+    "extends": "../src/tsconfig.json",
+    "compilerOptions": {
+        "lib": ["ES2018", "WebWorker"]
+    }
+}
