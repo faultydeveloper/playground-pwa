@@ -1,0 +1,1 @@
+(()=>{var e;null===(e=navigator.serviceWorker)||void 0===e||e.register("service-worker.js"),window.addEventListener("DOMContentLoaded",(()=>{document.body.textContent=window.location.href}))})();
