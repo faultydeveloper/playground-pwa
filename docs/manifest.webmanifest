@@ -17,7 +17,7 @@
     }
   ],
   "share_target": {
-    "action": "/",
+    "action": "/playground-pwa/",
     "method": "GET",
     "enctype": "application/x-www-form-urlencoded",
     "params": {
