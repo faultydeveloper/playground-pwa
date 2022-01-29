@@ -1,12 +1,13 @@
 declare var self: ServiceWorkerGlobalScope;
 
 const CACHE_NAME = 'pwa_cache';
+const PATH = '/playground-pwa';
 const URLS = [
-    '/',
-    '/index.html',
-    '/index.js',
-    '/favicon.png',
-    '/manifest.webmanifest'
+    `${PATH}/`,
+    `${PATH}/index.html`,
+    `${PATH}/index.js`,
+    `${PATH}/favicon.png`,
+    `${PATH}/manifest.webmanifest`
 ];
 
 self.addEventListener('install', e => {

@@ -2,9 +2,10 @@
     <head>
         <meta charset="UTF-8">
         <title>Playground PWA</title>
-        <link rel="manifest" href="<%= require('./manifest.webmanifest') %>">
-        <link rel="icon" href="<%= require('./favicon.png') %>">
-        <script type="text/javascript" src="index.js"></script>
+        <link rel="canonical" href="<%= server %><%= path %>">
+        <link rel="manifest" href="<%= path %><%= require('./manifest.webmanifest') %>">
+        <link rel="icon" href="<%= path %><%= require('./favicon.png') %>">
+        <script type="text/javascript" src="<%= path %>index.js"></script>
     </head>
     <body>
 

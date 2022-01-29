@@ -3,8 +3,8 @@
   "name": "Playground PWA",
   "short_name": "playground-pwa",
   "description": "Playground PWA",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "/playground-pwa/",
+  "start_url": "/playground-pwa/",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "display": "standalone",
@@ -17,7 +17,7 @@
     }
   ],
   "share_target": {
-    "action": "/share/",
+    "action": "/playground-pwa/index.html",
     "method": "GET",
     "enctype": "application/x-www-form-urlencoded",
     "params": {

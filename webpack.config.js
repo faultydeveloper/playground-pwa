@@ -1,12 +1,14 @@
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 /** @type {import('webpack').Configuration} */
-module.exports = {
+module.exports = env => ({
     entry: {
         index: './src/index.ts',
         'service-worker': './service-worker/service-worker.ts'
     },
     output: {
+        path: path.join(process.cwd(), env.docs ? 'docs' : 'dist'),
         filename: './[name].js',
         assetModuleFilename: '[name][ext]',
         clean: true
@@ -41,12 +43,23 @@ module.exports = {
             template: './src/index.ejs',
             filename: 'index.html',
             inject: false,
-            minify: true
+            minify: false,
+            templateParameters: {
+                server: env.docs ? 'https://faultydeveloper.github.io' : 'http://localhost:8080',
+                path: '/playground-pwa/'
+            }
         })
     ],
     devServer: {
         hot: false,
         liveReload: false,
-        webSocketServer: false
+        webSocketServer: false,
+        open: ['/playground-pwa'],
+        static: [
+            {
+                directory: path.join(__dirname, 'dist'),
+                publicPath: '/playground-pwa'
+            }
+        ]
     }
-};
+});
